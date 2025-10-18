@@ -38,6 +38,7 @@ public class C03_FileUploadTesti extends TestBase_Each {
         driver.findElement(By.id("file-submit"))
                 .click();
 
+        ReusableMethods.bekle(1);
         //“File Uploaded!” textinin goruntulendigini test edelim.
         WebElement fileUploadYaziElementi = driver.findElement(By.tagName("h3"));
 
@@ -46,7 +47,5 @@ public class C03_FileUploadTesti extends TestBase_Each {
 
         Assertions.assertEquals(expectedYazi,actualYazi);
 
-
-        ReusableMethods.bekle(5);
     }
 }
